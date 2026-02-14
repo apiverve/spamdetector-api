@@ -12,14 +12,8 @@ public class BasicExample {
         SpamDetectorAPIClient client = new SpamDetectorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Request body
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;text&quot;, &quot;Can you please spare some change?! Desperate!!! Send cash&quot;);
-        parameters.put(&quot;email&quot;, &quot;bankers@fre.323hotlain.net&quot;);
-        parameters.put(&quot;ip&quot;, &quot;122.180.184.182&quot;);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
