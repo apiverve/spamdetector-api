@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>APIVerve.API.SpamDetector</Title>
-    <Version>1.1.12</Version>
+    <Title>SpamDetector</Title>
+    <Version>1.1.13</Version>
     <Authors>APIVerve</Authors>
     <Company>APIVerve</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -12,13 +12,13 @@
 
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
-    <PackageProjectUrl>https://apiverve.com/marketplace/spamdetector</PackageProjectUrl>
+    <PackageProjectUrl>https://apiverve.com/marketplace/spamdetector?utm_source=nuget&amp;utm_medium=homepage</PackageProjectUrl>
     <SignAssembly>False</SignAssembly>
     <Description>Spam Detector is a simple tool for detecting spam in a text. It utilize an email address or IP address to validate the given text against the spam database.</Description>
     <RepositoryUrl>https://github.com/apiverve/spamdetector-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>spam detector;spam detection;spam detect api;spam detector api;spam detection api;api;rest;http;client;apiverve;wrapper;sdk;api;rest;http;client;apiverve;wrapper;sdk</PackageTags>
-    <Copyright>©2025 APIVerve. All Rights Reserved</Copyright>
+    <PackageTags>api;rest;http;client;apiverve;wrapper;sdk;api;rest;http;client;apiverve;wrapper;sdk</PackageTags>
+    <Copyright>©2026 APIVerve. All Rights Reserved</Copyright>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <PackageIcon>favicon@128.png</PackageIcon>
     <BaseOutputPath>.\bin</BaseOutputPath>
