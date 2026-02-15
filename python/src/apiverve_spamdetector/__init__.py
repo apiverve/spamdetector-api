@@ -1,1 +1,3 @@
-from .apiClient import SpamdetectorAPIClient
+from .apiClient import SpamdetectorAPIClient, SpamdetectorAPIClientError
+
+__all__ = ['SpamdetectorAPIClient', 'SpamdetectorAPIClientError']
