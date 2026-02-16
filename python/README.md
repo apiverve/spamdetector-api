@@ -44,7 +44,11 @@ from apiverve_spamdetector.apiClient import SpamdetectorAPIClient
 # Initialize the client with your APIVerve API key
 api = SpamdetectorAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
 ```
 
 ###### Simple Request
@@ -127,7 +135,11 @@ from apiverve_spamdetector.apiClient import SpamdetectorAPIClient, SpamdetectorA
 
 api = SpamdetectorAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
 
 try:
     result = api.execute(query)
@@ -148,7 +160,11 @@ from apiverve_spamdetector.apiClient import SpamdetectorAPIClient, SpamdetectorA
 
 api = SpamdetectorAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
 
 try:
     result = api.execute(query)
@@ -182,7 +198,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_spamdetector.apiClient import SpamdetectorAPIClient, SpamdetectorAPIClientError
 
-query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
 
 # Using context manager ensures proper cleanup
 with SpamdetectorAPIClient("[YOUR_API_KEY]") as api:
@@ -208,7 +228,11 @@ from apiverve_spamdetector.apiClient import SpamdetectorAPIClient
 # Enable debug mode
 api = SpamdetectorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -223,8 +247,13 @@ from apiverve_spamdetector.apiClient import SpamdetectorAPIClient
 
 api = SpamdetectorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "Can you please spare some change?! Desperate!!! Send cash",
+    "email": "bankers@fre.323hotlain.net",
+    "ip": "122.180.184.182"
+}
+
 try:
-    query = { "text": "Can you please spare some change?! Desperate!!! Send cash", "email": "bankers@fre.323hotlain.net", "ip": "122.180.184.182" }
     result = api.execute(query)
     print(result)
 finally:
