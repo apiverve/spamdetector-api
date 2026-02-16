@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:spamdetector-api:1.1.13'
+    implementation 'com.github.apiverve:spamdetector-api:1.1.14'
 }
 ```
 
@@ -47,9 +47,9 @@ SpamDetectorAPIClient client = new SpamDetectorAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "");
-    parameters.put("email", "");
-    parameters.put("ip", "");
+    parameters.put("text", "Can you please spare some change?! Desperate!!! Send cash");
+    parameters.put("email", "bankers@fre.323hotlain.net");
+    parameters.put("ip", "122.180.184.182");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
