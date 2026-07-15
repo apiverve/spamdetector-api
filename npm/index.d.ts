@@ -4,25 +4,37 @@ declare module '@apiverve/spamdetector' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface spamdetectorResponse {
     status: string;
     error: string | null;
     data: SpamDetectorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface SpamDetectorData {
-      likelySpam:        boolean;
-      isDisposableEmail: boolean;
-      isIPBlacklisted:   boolean;
+      likelySpam:        boolean | null;
+      isDisposableEmail: boolean | null;
+      isIPBlacklisted:   boolean | null;
       ipDetails:         IPDetails;
-      parsed:            boolean;
+      parsed:            boolean | null;
   }
   
   interface IPDetails {
-      country: string;
-      region:  string;
+      country: null | string;
+      region:  null | string;
   }
 
   export default class spamdetectorWrapper {
