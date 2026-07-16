@@ -25,24 +25,27 @@ namespace APIVerve.API.SpamDetector
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("likelySpam")]
-        public bool LikelySpam { get; set; }
+        public bool? LikelySpam { get; set; }
 
         [JsonProperty("isDisposableEmail")]
-        public bool IsDisposableEmail { get; set; }
+        public bool? IsDisposableEmail { get; set; }
 
         [JsonProperty("isIPBlacklisted")]
-        public bool IsIpBlacklisted { get; set; }
+        public bool? IsIpBlacklisted { get; set; }
 
         [JsonProperty("ipDetails")]
         public IpDetails IpDetails { get; set; }
 
         [JsonProperty("parsed")]
-        public bool Parsed { get; set; }
+        public bool? Parsed { get; set; }
     }
 
     public partial class IpDetails
@@ -52,5 +55,17 @@ namespace APIVerve.API.SpamDetector
 
         [JsonProperty("region")]
         public string Region { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
