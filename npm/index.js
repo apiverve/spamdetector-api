@@ -30,7 +30,7 @@ class spamdetectorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/spamdetector';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"text":{"type":"string","required":true},"email":{"type":"string","required":false,"format":"email"},"ip":{"type":"string","required":false,"format":"ip"}};
+        this.validationRules = {"text":{"type":"string","required":true,"maxLength":50000},"email":{"type":"string","required":false,"format":"email"},"ip":{"type":"string","required":false,"format":"ip"}};
     }
 
     /**

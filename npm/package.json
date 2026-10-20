@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/spamdetector",
-  "version": "1.2.0",
-  "description": "Spam Detector is a simple tool for detecting spam in a text. It utilize an email address or IP address to validate the given text against the spam database.",
+  "version": "1.2.2",
+  "description": "Spam Detector is a spam detection API that evaluates text submissions to determine whether content is likely spam. Pass a message body and an optional sender email to check for spam patterns, with paid plans adding IP blocklist and disposable email checks.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "spam detector", "spam detection", "spam detect api", "spam detector api", "spam detection api"
+    "spam detection api", "spam check api", "spam detector api", "spam api", "spam detect api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/spamdetector-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/spamdetector?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/spamdetector?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
