@@ -1,13 +1,12 @@
-SpamDetector API
+Spam Detector API
 ============
 
-Spam Detector is a simple tool for detecting spam in a text. It utilize an email address or IP address to validate the given text against the spam database.
+Spam Detector is a spam detection API that evaluates text submissions to determine whether content is likely spam. Pass a message body and an optional sender email to check for spam patterns, with paid plans adding IP blocklist and disposable email checks.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [SpamDetector API](https://apiverve.com/marketplace/spamdetector?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.SpamDetector.svg)](https://www.nuget.org/packages/APIVerve.API.SpamDetector)
+
+This is a .NET wrapper for the [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the spamdetector API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Spam Detector API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,10 +60,10 @@ class Program
         var apiClient = new SpamDetectorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
-};
+            Text = "Can you please spare some change?! Desperate!!! Send cash",
+            Email = "bankers@fre.323hotlain.net",
+            Ip = "122.180.184.182"
+        };
 
         // Make the API call
         try
@@ -94,13 +93,13 @@ class Program
 
 ## Usage
 
-The SpamDetector API documentation is found here: [https://docs.apiverve.com/ref/spamdetector](https://docs.apiverve.com/ref/spamdetector?utm_source=nuget&utm_medium=readme).
+The Spam Detector API documentation is found here: [https://docs.apiverve.com/ref/spamdetector](https://docs.apiverve.com/ref/spamdetector?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-SpamDetector API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Spam Detector API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -127,10 +126,10 @@ public class Example
         var apiClient = new SpamDetectorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
-};
+            Text = "Can you please spare some change?! Desperate!!! Send cash",
+            Email = "bankers@fre.323hotlain.net",
+            Ip = "122.180.184.182"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -161,10 +160,10 @@ public class Example
         var apiClient = new SpamDetectorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
-};
+            Text = "Can you please spare some change?! Desperate!!! Send cash",
+            Email = "bankers@fre.323hotlain.net",
+            Ip = "122.180.184.182"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -200,10 +199,10 @@ public class Example
         var apiClient = new SpamDetectorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
-};
+            Text = "Can you please spare some change?! Desperate!!! Send cash",
+            Email = "bankers@fre.323hotlain.net",
+            Ip = "122.180.184.182"
+        };
 
         try
         {
@@ -258,10 +257,10 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
-};
+            Text = "Can you please spare some change?! Desperate!!! Send cash",
+            Email = "bankers@fre.323hotlain.net",
+            Ip = "122.180.184.182"
+        };
 
         try
         {
@@ -301,9 +300,9 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
+    Text = "Can you please spare some change?! Desperate!!! Send cash",
+    Email = "bankers@fre.323hotlain.net",
+    Ip = "122.180.184.182"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -329,9 +328,9 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
+    Text = "Can you please spare some change?! Desperate!!! Send cash",
+    Email = "bankers@fre.323hotlain.net",
+    Ip = "122.180.184.182"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -349,9 +348,9 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
+    Text = "Can you please spare some change?! Desperate!!! Send cash",
+    Email = "bankers@fre.323hotlain.net",
+    Ip = "122.180.184.182"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -363,9 +362,9 @@ The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
 var queryOptions = new SpamDetectorQueryOptions {
-    text = "Can you please spare some change?! Desperate!!! Send cash",
-    email = "bankers@fre.323hotlain.net",
-    ip = "122.180.184.182"
+    Text = "Can you please spare some change?! Desperate!!! Send cash",
+    Email = "bankers@fre.323hotlain.net",
+    Ip = "122.180.184.182"
 };
 
 using (var apiClient = new SpamDetectorAPIClient("[YOUR_API_KEY]"))
@@ -401,7 +400,7 @@ using (var apiClient = new SpamDetectorAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -412,12 +411,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
