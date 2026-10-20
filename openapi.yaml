@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Spam Detector
   description: >-
-    Spam Detector is a simple tool for detecting spam in a text. It utilize an
-    email address or IP address to validate the given text against the spam
-    database.
+    Spam Detector is a spam detection API that evaluates text submissions to
+    determine whether content is likely spam. Pass a message body and an
+    optional sender email to check for spam patterns, with paid plans adding IP
+    blocklist and disposable email checks.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/spamdetector:
     post:
-      summary: Detect Spam
+      summary: Spam Detector
       description: >-
         Detect spam in a body of text. Also utilize an email address or IP
         address to validate the given text against the spam database

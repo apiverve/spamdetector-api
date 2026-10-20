@@ -1,13 +1,13 @@
-# [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Spam Detector is a simple tool for detecting spam in a text. It utilize an email address or IP address to validate the given text against the spam database.
+Spam Detector is a spam detection API that evaluates text submissions to determine whether content is likely spam. Pass a message body and an optional sender email to check for spam patterns, with paid plans adding IP blocklist and disposable email checks.
 
 The Spam Detector API provides a simple, reliable way to integrate spam detector functionality into your applications. Built for developers who need production-ready spam detector capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -171,7 +171,7 @@ go get github.com/apiverve/spamdetector-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/spamdetector](https://docs.apiverve.com/ref/spamdetector)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -201,11 +201,35 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Spam Detector API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "likelySpam": true,
+    "isDisposableEmail": false,
+    "isIPBlacklisted": false,
+    "ipDetails": {
+      "country": "IN",
+      "region": "DL"
+    },
+    "parsed": true
+  }
 }
 ```
 
@@ -213,7 +237,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Spam Detector API](https://apiverve.com/marketplace/spamdetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
