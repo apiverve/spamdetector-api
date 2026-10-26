@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/spamdetector",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Spam Detector is a spam detection API that evaluates text submissions to determine whether content is likely spam. Pass a message body and an optional sender email to check for spam patterns, with paid plans adding IP blocklist and disposable email checks.",
   "main": "index.js",
   "types": "index.d.ts",
